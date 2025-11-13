@@ -75,6 +75,39 @@ Update the following files with your personal information:
 
 **Note:** Files in the `public` folder are accessible from the root URL (e.g., `/Resume.pdf`, `/profile.jpg`)
 
+### Setting Up Contact Form (Web3Forms)
+
+The contact form uses Web3Forms for form submissions. To make it functional:
+
+1. **Get your free access key:**
+   - Visit [https://web3forms.com](https://web3forms.com)
+   - Sign up for a free account
+   - Copy your access key
+
+2. **Add the access key to environment variables:**
+   - Create a `.env.local` file in the root directory
+   - Add the following line:
+     ```
+     NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_access_key_here
+     ```
+   - Replace `your_access_key_here` with your actual access key from Web3Forms
+
+3. **Restart your development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **For production deployment:**
+   - Add the `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` environment variable in your hosting platform (Vercel, Netlify, etc.)
+   - The form will automatically work once the environment variable is set
+
+**Note:** The form includes:
+- Success/error message display
+- Form validation
+- Loading states
+- Automatic form reset on success
+- Email notifications to your registered email
+
 ### Styling
 
 The color scheme can be customized in `tailwind.config.ts`. The primary color is currently set to orange (#FF6B35), which can be changed to match your preferences.
