@@ -18,11 +18,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 sm:px-10 lg:px-16 bg-gradient-to-br from-background-light via-background-light/95 to-background-light dark:from-background-dark dark:via-background-dark/95 dark:to-background-dark overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-6 sm:px-10 lg:px-16 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-background-dark dark:via-background-dark/95 dark:to-background-dark overflow-hidden"
     >
       {/* ==== Background Glows ==== */}
-      <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl -z-10"></div>
 
       {/* ==== Floating Developer Particles ==== */}
       {codeParticles.map((symbol, index) => (

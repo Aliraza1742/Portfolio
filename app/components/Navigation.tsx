@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import Logo from './Logo';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -52,16 +53,16 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-gray-200/80 dark:border-gray-800/50 shadow-md dark:shadow-gray-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center">
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="text-xl font-bold text-gray-900 dark:text-white hover:text-primary transition-colors"
+              className="flex items-center group transition-all duration-200"
             >
-              Portfolio
+              <Logo />
             </a>
           </div>
 
@@ -74,8 +75,8 @@ export default function Navigation() {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   activeSection === item.href.substring(1)
-                    ? 'text-primary dark:text-primary'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary'
+                    ? 'text-primary dark:text-primary font-semibold'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary'
                 }`}
               >
                 {item.name}
@@ -111,8 +112,8 @@ export default function Navigation() {
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`block px-3 py-2 text-base font-medium transition-colors ${
                   activeSection === item.href.substring(1)
-                    ? 'text-primary dark:text-primary'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary'
+                    ? 'text-primary dark:text-primary font-semibold'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary'
                 }`}
               >
                 {item.name}

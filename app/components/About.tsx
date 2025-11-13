@@ -30,7 +30,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-background-dark"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background-dark"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -38,7 +38,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             About Me
@@ -51,7 +51,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {aboutPoints.map((point, index) => (
             <motion.div
               key={point.title}
@@ -59,9 +59,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center hover:shadow-lg dark:hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-primary/20 dark:hover:border-primary/30"
             >
-              <div className="inline-flex p-4 bg-primary/10 rounded-full mb-4">
+              <div className="inline-flex p-4 bg-primary/10 dark:bg-primary/20 rounded-full mb-4 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors">
                 <point.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -79,9 +79,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 max-w-3xl mx-auto"
+          className="mt-12 max-w-3xl mx-auto"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm dark:shadow-none">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               When I'm not coding, you can find me exploring new technologies,
               contributing to open-source projects, or sharing knowledge with

@@ -80,8 +80,8 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'aliraza.17420@gmail.com',
-      href: 'mailto:aliraza.17420@gmail.com',
+      value: 'aliraza.174200@gmail.com',
+      href: 'mailto:aliraza.174200@gmail.com',
     },
     {
       icon: Phone,
@@ -106,7 +106,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-background-dark"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background-dark"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -114,7 +114,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
@@ -124,14 +124,14 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6"
           >
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
@@ -146,9 +146,9 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg hover:shadow-lg transition-all duration-200 group border border-transparent hover:border-primary/20"
+                    className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:shadow-lg dark:hover:shadow-xl transition-all duration-200 group border border-gray-100 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/20"
                   >
-                    <div className="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-200">
+                    <div className="p-3 bg-primary/10 dark:bg-primary/20 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-200 shadow-sm">
                       <info.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-200" />
                     </div>
                     <div>
@@ -180,7 +180,7 @@ export default function Contact() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-primary hover:text-white transition-colors"
+                    className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 border border-gray-100 dark:border-gray-700 hover:border-primary shadow-sm hover:shadow-md"
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6" />
@@ -197,7 +197,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
-            className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
+            className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-lg dark:shadow-xl border border-gray-100 dark:border-gray-700"
           >
             <div className="space-y-6">
               {/* Status Message */}

@@ -46,7 +46,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background-dark"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-background-dark"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -54,7 +54,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Featured Projects
@@ -64,7 +64,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -129,7 +129,7 @@ export default function Projects() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
           <a
             href="https://github.com"
